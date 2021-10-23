@@ -17,63 +17,20 @@
     <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_X-v9UC53Eey3BsU_mawkfQ" name="Message4ReceiveEvent" covered="_Evq5UC53Eey3BsU_mawkfQ" message="_X-ih8C53Eey3BsU_mawkfQ"/>
     <message xmi:type="uml:Message" xmi:id="_X-ih8C53Eey3BsU_mawkfQ" name="saveVolt" receiveEvent="_X-v9UC53Eey3BsU_mawkfQ" sendEvent="_X-vWQC53Eey3BsU_mawkfQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_2DLB4CzEEey9AIfa-wIJCA" name="전기생성시스템">
-    <ownedComment xmi:type="uml:Comment" xmi:id="_k36aUCzFEey9AIfa-wIJCA">
-      <body>태양광 패널로부터 전기를 생산한다. 생성한 전기는 보조배터리에 저장된다.&#xD;
-</body>
-    </ownedComment>
-  </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_3RpAICzEEey9AIfa-wIJCA" name="배터리저장시스템">
-    <ownedComment xmi:type="uml:Comment" xmi:id="_8RX0ECzFEey9AIfa-wIJCA">
-      <body>태양광 패널로부터 생산된 전기를 저장한다. &#xD;
-배터리량 측정 시스템을 통해 배터리의 잔량을 알 수 있다.</body>
-    </ownedComment>
-  </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_4Bd6kCzEEey9AIfa-wIJCA" name="온도제어시스템">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_4Bd6kCzEEey9AIfa-wIJCA" name="태양광 패널의 온도를 제어한다">
     <ownedComment xmi:type="uml:Comment" xmi:id="_UEY9UCzGEey9AIfa-wIJCA">
-      <body>배터리 충전량이 30%가 넘었을 경우 가동된다.&#xD;
-온도센서를 통해 태양광 패널의 온도를 측정하고 일정 온도 이상 올라가면 모터를 가동한다. &#xD;
+      <body>온도센서를 통해 태양광 패널의 온도를 측정하고 일정 온도 이상 올라가면 모터를 가동한다. &#xD;
 모터가 가동된 상태일 때 일정 온도 이하로 내려갈 때 가지 모터를 계속 가동한다.&#xD;
 모터가 일정 온도 이하로 내려갔다면 모터 가동을 중지한다. </body>
     </ownedComment>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_BbaFcCzFEey9AIfa-wIJCA" memberEnd="_BbiBQCzFEey9AIfa-wIJCA _BbioUCzFEey9AIfa-wIJCA">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_BbbTkCzFEey9AIfa-wIJCA" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Bbb6oCzFEey9AIfa-wIJCA" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_BbiBQCzFEey9AIfa-wIJCA" name="온도제어시스템" type="_z0eDwCzGEey9AIfa-wIJCA" association="_BbaFcCzFEey9AIfa-wIJCA"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_BbioUCzFEey9AIfa-wIJCA" name="전기생성" type="_3RpAICzEEey9AIfa-wIJCA" association="_BbaFcCzFEey9AIfa-wIJCA"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_ChQ6QCzFEey9AIfa-wIJCA" memberEnd="_ChQ6QyzFEey9AIfa-wIJCA _ChQ6RCzFEey9AIfa-wIJCA">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ChQ6QSzFEey9AIfa-wIJCA" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ChQ6QizFEey9AIfa-wIJCA" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_ChQ6QyzFEey9AIfa-wIJCA" name="배터리저장" type="_3RpAICzEEey9AIfa-wIJCA" association="_ChQ6QCzFEey9AIfa-wIJCA"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_ChQ6RCzFEey9AIfa-wIJCA" name="전기생성" type="_2DLB4CzEEey9AIfa-wIJCA" association="_ChQ6QCzFEey9AIfa-wIJCA"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Actor" xmi:id="_HwIy4CzFEey9AIfa-wIJCA" name="태양광 패널"/>
   <packagedElement xmi:type="uml:Actor" xmi:id="_JJgZkCzFEey9AIfa-wIJCA" name="모터"/>
   <packagedElement xmi:type="uml:Actor" xmi:id="_WTfHkCzFEey9AIfa-wIJCA" name="온도센서"/>
-  <packagedElement xmi:type="uml:Association" xmi:id="_e6ZTACzFEey9AIfa-wIJCA" memberEnd="_e6Z6EizFEey9AIfa-wIJCA _e6Z6EyzFEey9AIfa-wIJCA">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_e6Z6ECzFEey9AIfa-wIJCA" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_e6Z6ESzFEey9AIfa-wIJCA" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_e6Z6EizFEey9AIfa-wIJCA" name="전기생성" type="_2DLB4CzEEey9AIfa-wIJCA" association="_e6ZTACzFEey9AIfa-wIJCA"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_e6Z6EyzFEey9AIfa-wIJCA" name="태양광 패널" type="_HwIy4CzFEey9AIfa-wIJCA" association="_e6ZTACzFEey9AIfa-wIJCA"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Actor" xmi:id="_lge2MCzFEey9AIfa-wIJCA" name="보조배터리"/>
-  <packagedElement xmi:type="uml:Association" xmi:id="_mpcpYCzFEey9AIfa-wIJCA" memberEnd="_mpd3gCzFEey9AIfa-wIJCA _mpd3gSzFEey9AIfa-wIJCA">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_mpdQcCzFEey9AIfa-wIJCA" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_mpdQcSzFEey9AIfa-wIJCA" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_mpd3gCzFEey9AIfa-wIJCA" name="배터리저장" type="_3RpAICzEEey9AIfa-wIJCA" association="_mpcpYCzFEey9AIfa-wIJCA"/>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_mpd3gSzFEey9AIfa-wIJCA" name="보조배터리" type="_lge2MCzFEey9AIfa-wIJCA" association="_mpcpYCzFEey9AIfa-wIJCA"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:UseCase" xmi:id="_z0eDwCzGEey9AIfa-wIJCA" name="배터리량측정시스템">
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_z0eDwCzGEey9AIfa-wIJCA" name="배터리량을 측정한다">
     <ownedComment xmi:type="uml:Comment" xmi:id="_KPM5kC52Eey3BsU_mawkfQ">
-      <body>배터리 잔량 측정 모듈을 통해서 보조배터리의 배터리량을 확인한다.&#xD;
-만약 배터리량이 30%이상이라면 온도제어시스템을 가동한다.&#xD;
-그렇지 않으면 온도제어시스템을 가동하지 않는다.</body>
+      <body>배터리 잔량 측정 모듈을 통해서 배터리의 배터리량을 확인한다.&#xD;
+만약 배터리량이 30%이상이라면 온도 컨트롤러를 작동한다.&#xD;
+그렇지 않으면 온도 컨트롤러를 작동하지 않는다.</body>
     </ownedComment>
   </packagedElement>
   <packagedElement xmi:type="uml:Association" xmi:id="_91Cw0CzGEey9AIfa-wIJCA" memberEnd="_91D-8izGEey9AIfa-wIJCA _91D-8yzGEey9AIfa-wIJCA">
@@ -110,37 +67,73 @@
     <message xmi:type="uml:Message" xmi:id="_Ezz7AC6OEeycSuEX0atgvQ" name="getVolt" receiveEvent="_Ez0iES6OEeycSuEX0atgvQ" sendEvent="_Ez0iEC6OEeycSuEX0atgvQ"/>
     <message xmi:type="uml:Message" xmi:id="_E0EZsC6OEeycSuEX0atgvQ" name="" messageSort="reply" receiveEvent="_E0EZsi6OEeycSuEX0atgvQ" sendEvent="_E0EZsS6OEeycSuEX0atgvQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Interaction" xmi:id="_nlvD0C54Eey3BsU_mawkfQ" name="배터리량측정시스템">
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_nlvD0C54Eey3BsU_mawkfQ" name="전기생산">
     <ownedComment xmi:type="uml:Comment" xmi:id="_skgq8C54Eey3BsU_mawkfQ">
-      <body>배터리 잔량 측정 모듈을 통해서 보조배터리의 배터리량을 확인한다.&#xD;
-만약 배터리량이 30%이상이라면 온도제어시스템을 가동한다.&#xD;
-그렇지 않으면 온도제어시스템을 가동하지 않는다.</body>
+      <body>온도센서를 통해 태양광 패널의 온도를 측정하고 사용자 설정온도 이상 올라가면 모터를 가동한다. &#xD;
+모터가 가동된 상태일 때 사용자 설정온도 이하로 내려갈 때 가지 모터를 계속 가동한다.&#xD;
+모터가 사용자 설정온도 이하로 내려갔다면 모터 가동을 중지한다. </body>
     </ownedComment>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_szHusC54Eey3BsU_mawkfQ" name="Baterry" coveredBy="_zRQDMS6NEeycSuEX0atgvQ _zRpr0i6NEeycSuEX0atgvQ _4byOYC6NEeycSuEX0atgvQ _4cOTQC6NEeycSuEX0atgvQ"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_Ajor0C55Eey3BsU_mawkfQ" name="CheckBaterry" coveredBy="_zRQDMi6NEeycSuEX0atgvQ _zRpr0S6NEeycSuEX0atgvQ _zRnPkC6NEeycSuEX0atgvQ"/>
-    <lifeline xmi:type="uml:Lifeline" xmi:id="_ES2IgC55Eey3BsU_mawkfQ" name="TempController" coveredBy="_4byOYS6NEeycSuEX0atgvQ _4cNsMS6NEeycSuEX0atgvQ _4cLP8C6NEeycSuEX0atgvQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_zRQDMS6NEeycSuEX0atgvQ" name="Message12SendEvent" covered="_szHusC54Eey3BsU_mawkfQ" message="_zRQDMC6NEeycSuEX0atgvQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_zRQDMi6NEeycSuEX0atgvQ" name="Message12ReceiveEvent" covered="_Ajor0C55Eey3BsU_mawkfQ" message="_zRQDMC6NEeycSuEX0atgvQ"/>
-    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_zRnPkC6NEeycSuEX0atgvQ" name="BehaviorExecutionSpecification15" covered="_Ajor0C55Eey3BsU_mawkfQ" finish="_zRpr0S6NEeycSuEX0atgvQ" start="_zRQDMi6NEeycSuEX0atgvQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_zRpr0S6NEeycSuEX0atgvQ" name="Message17SendEvent" covered="_Ajor0C55Eey3BsU_mawkfQ" message="_zRpr0C6NEeycSuEX0atgvQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_zRpr0i6NEeycSuEX0atgvQ" name="Message17ReceiveEvent" covered="_szHusC54Eey3BsU_mawkfQ" message="_zRpr0C6NEeycSuEX0atgvQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_4byOYC6NEeycSuEX0atgvQ" name="Message12SendEvent" covered="_szHusC54Eey3BsU_mawkfQ" message="_4bxnUC6NEeycSuEX0atgvQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_4byOYS6NEeycSuEX0atgvQ" name="Message12ReceiveEvent" covered="_ES2IgC55Eey3BsU_mawkfQ" message="_4bxnUC6NEeycSuEX0atgvQ"/>
-    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_4cLP8C6NEeycSuEX0atgvQ" name="BehaviorExecutionSpecification15" covered="_ES2IgC55Eey3BsU_mawkfQ" finish="_4cNsMS6NEeycSuEX0atgvQ" start="_4byOYS6NEeycSuEX0atgvQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_4cNsMS6NEeycSuEX0atgvQ" name="Message17SendEvent" covered="_ES2IgC55Eey3BsU_mawkfQ" message="_4cNsMC6NEeycSuEX0atgvQ"/>
-    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_4cOTQC6NEeycSuEX0atgvQ" name="Message17ReceiveEvent" covered="_szHusC54Eey3BsU_mawkfQ" message="_4cNsMC6NEeycSuEX0atgvQ"/>
-    <message xmi:type="uml:Message" xmi:id="_zRQDMC6NEeycSuEX0atgvQ" name="getVolt" receiveEvent="_zRQDMi6NEeycSuEX0atgvQ" sendEvent="_zRQDMS6NEeycSuEX0atgvQ"/>
-    <message xmi:type="uml:Message" xmi:id="_zRpr0C6NEeycSuEX0atgvQ" name="" messageSort="reply" receiveEvent="_zRpr0i6NEeycSuEX0atgvQ" sendEvent="_zRpr0S6NEeycSuEX0atgvQ"/>
-    <message xmi:type="uml:Message" xmi:id="_4bxnUC6NEeycSuEX0atgvQ" name="startTempController" receiveEvent="_4byOYS6NEeycSuEX0atgvQ" sendEvent="_4byOYC6NEeycSuEX0atgvQ"/>
-    <message xmi:type="uml:Message" xmi:id="_4cNsMC6NEeycSuEX0atgvQ" name="" messageSort="reply" receiveEvent="_4cOTQC6NEeycSuEX0atgvQ" sendEvent="_4cNsMS6NEeycSuEX0atgvQ"/>
+    <ownedComment xmi:type="uml:Comment" xmi:id="_xxaRMDOoEey7hLHEFocGqQ">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_HZyH0DOpEey7hLHEFocGqQ">
+        <body>Motor의 run이  true일 때 태양광 패널의 온도가 사용자 지정 온도로 내려가게 되면 모터 작동이 멈춘다.</body>
+      </ownedComment>
+      <body>stop 작동 방식&#xD;
+document 설명</body>
+    </ownedComment>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_Ajor0C55Eey3BsU_mawkfQ" name="CheckBatterry" coveredBy="_zRQDMi6NEeycSuEX0atgvQ _FF5s8DPmEey7hLHEFocGqQ _FF6UADPmEey7hLHEFocGqQ _zRpr0S6NEeycSuEX0atgvQ _QzFs0DPmEey7hLHEFocGqQ _Qzt-8TPmEey7hLHEFocGqQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_ES2IgC55Eey3BsU_mawkfQ" name="PanelTempController" coveredBy="_QzGT4DPmEey7hLHEFocGqQ _4byOYS6NEeycSuEX0atgvQ _Qzt-8DPmEey7hLHEFocGqQ _4cNsMS6NEeycSuEX0atgvQ _mqAe8DOoEey7hLHEFocGqQ _mq5PwTOoEey7hLHEFocGqQ _nyjbYDOoEey7hLHEFocGqQ _otVBkDOoEey7hLHEFocGqQ _nzkvETOoEey7hLHEFocGqQ _oujJkjOoEey7hLHEFocGqQ _QzrisDPmEey7hLHEFocGqQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_E5S9gDOoEey7hLHEFocGqQ" name="TempSensor" coveredBy="_mqAe8TOoEey7hLHEFocGqQ _mq5PwDOoEey7hLHEFocGqQ _mq2zgDOoEey7hLHEFocGqQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_O_Zq0DOoEey7hLHEFocGqQ" name="Motor" coveredBy="_nykpgDOoEey7hLHEFocGqQ _nzkvEDOoEey7hLHEFocGqQ _otVooDOoEey7hLHEFocGqQ _oujJkTOoEey7hLHEFocGqQ _nziS0DOoEey7hLHEFocGqQ _ouhUYDOoEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_zRQDMi6NEeycSuEX0atgvQ" name="Message12ReceiveEvent" covered="_Ajor0C55Eey3BsU_mawkfQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_EkL8cDPlEey7hLHEFocGqQ" name="BehaviorExecutionSpecification15" finish="_zRpr0S6NEeycSuEX0atgvQ" start="_zRQDMi6NEeycSuEX0atgvQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_Ax4TADPmEey7hLHEFocGqQ" name="BehaviorExecutionSpecification15" finish="_zRpr0S6NEeycSuEX0atgvQ" start="_zRQDMi6NEeycSuEX0atgvQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_FF5s8DPmEey7hLHEFocGqQ" name="Message35SendEvent" covered="_Ajor0C55Eey3BsU_mawkfQ" message="_FF4e0DPmEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_FF6UADPmEey7hLHEFocGqQ" name="Message35ReceiveEvent" covered="_Ajor0C55Eey3BsU_mawkfQ" message="_FF4e0DPmEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_zRpr0S6NEeycSuEX0atgvQ" name="Message17SendEvent" covered="_Ajor0C55Eey3BsU_mawkfQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QzFs0DPmEey7hLHEFocGqQ" name="Message38SendEvent" covered="_Ajor0C55Eey3BsU_mawkfQ" message="_QzFFwDPmEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QzGT4DPmEey7hLHEFocGqQ" name="Message38ReceiveEvent" covered="_ES2IgC55Eey3BsU_mawkfQ" message="_QzFFwDPmEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_QzrisDPmEey7hLHEFocGqQ" name="BehaviorExecutionSpecification41" covered="_ES2IgC55Eey3BsU_mawkfQ" finish="_Qzt-8DPmEey7hLHEFocGqQ" start="_QzGT4DPmEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_4byOYS6NEeycSuEX0atgvQ" name="Message12ReceiveEvent" covered="_ES2IgC55Eey3BsU_mawkfQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_FLS_wDPlEey7hLHEFocGqQ" name="BehaviorExecutionSpecification15" finish="_4cNsMS6NEeycSuEX0atgvQ" start="_4byOYS6NEeycSuEX0atgvQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Qzt-8DPmEey7hLHEFocGqQ" name="Message43SendEvent" covered="_ES2IgC55Eey3BsU_mawkfQ" message="_QztX4DPmEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Qzt-8TPmEey7hLHEFocGqQ" name="Message43ReceiveEvent" covered="_Ajor0C55Eey3BsU_mawkfQ" message="_QztX4DPmEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_4cNsMS6NEeycSuEX0atgvQ" name="Message17SendEvent" covered="_ES2IgC55Eey3BsU_mawkfQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_mqAe8DOoEey7hLHEFocGqQ" name="Message22SendEvent" covered="_ES2IgC55Eey3BsU_mawkfQ" message="_mp_Q0DOoEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_mqAe8TOoEey7hLHEFocGqQ" name="Message22ReceiveEvent" covered="_E5S9gDOoEey7hLHEFocGqQ" message="_mp_Q0DOoEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_mq2zgDOoEey7hLHEFocGqQ" name="BehaviorExecutionSpecification25" covered="_E5S9gDOoEey7hLHEFocGqQ" finish="_mq5PwDOoEey7hLHEFocGqQ" start="_mqAe8TOoEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_mq5PwDOoEey7hLHEFocGqQ" name="Message27SendEvent" covered="_E5S9gDOoEey7hLHEFocGqQ" message="_mq4osDOoEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_mq5PwTOoEey7hLHEFocGqQ" name="Message27ReceiveEvent" covered="_ES2IgC55Eey3BsU_mawkfQ" message="_mq4osDOoEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_nyjbYDOoEey7hLHEFocGqQ" name="Message29SendEvent" covered="_ES2IgC55Eey3BsU_mawkfQ" message="_nyi0UDOoEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_nykpgDOoEey7hLHEFocGqQ" name="Message29ReceiveEvent" covered="_O_Zq0DOoEey7hLHEFocGqQ" message="_nyi0UDOoEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_nziS0DOoEey7hLHEFocGqQ" name="BehaviorExecutionSpecification32" covered="_O_Zq0DOoEey7hLHEFocGqQ" finish="_nzkvEDOoEey7hLHEFocGqQ" start="_nykpgDOoEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_nzkvEDOoEey7hLHEFocGqQ" name="Message34SendEvent" covered="_O_Zq0DOoEey7hLHEFocGqQ" message="_nzkIADOoEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_otVBkDOoEey7hLHEFocGqQ" name="Message36SendEvent" covered="_ES2IgC55Eey3BsU_mawkfQ" message="_otUagDOoEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_otVooDOoEey7hLHEFocGqQ" name="Message36ReceiveEvent" covered="_O_Zq0DOoEey7hLHEFocGqQ" message="_otUagDOoEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_ouhUYDOoEey7hLHEFocGqQ" name="BehaviorExecutionSpecification39" covered="_O_Zq0DOoEey7hLHEFocGqQ" finish="_oujJkTOoEey7hLHEFocGqQ" start="_otVooDOoEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_nzkvETOoEey7hLHEFocGqQ" name="Message34ReceiveEvent" covered="_ES2IgC55Eey3BsU_mawkfQ" message="_nzkIADOoEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_oujJkTOoEey7hLHEFocGqQ" name="Message41SendEvent" covered="_O_Zq0DOoEey7hLHEFocGqQ" message="_oujJkDOoEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_oujJkjOoEey7hLHEFocGqQ" name="Message41ReceiveEvent" covered="_ES2IgC55Eey3BsU_mawkfQ" message="_oujJkDOoEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_mp_Q0DOoEey7hLHEFocGqQ" name="getTemp" receiveEvent="_mqAe8TOoEey7hLHEFocGqQ" sendEvent="_mqAe8DOoEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_mq4osDOoEey7hLHEFocGqQ" name="" messageSort="reply" receiveEvent="_mq5PwTOoEey7hLHEFocGqQ" sendEvent="_mq5PwDOoEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_nyi0UDOoEey7hLHEFocGqQ" name="run" receiveEvent="_nykpgDOoEey7hLHEFocGqQ" sendEvent="_nyjbYDOoEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_nzkIADOoEey7hLHEFocGqQ" name="" messageSort="reply" receiveEvent="_nzkvETOoEey7hLHEFocGqQ" sendEvent="_nzkvEDOoEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_otUagDOoEey7hLHEFocGqQ" name="stop" receiveEvent="_otVooDOoEey7hLHEFocGqQ" sendEvent="_otVBkDOoEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_oujJkDOoEey7hLHEFocGqQ" name="" messageSort="reply" receiveEvent="_oujJkjOoEey7hLHEFocGqQ" sendEvent="_oujJkTOoEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_FF4e0DPmEey7hLHEFocGqQ" name="check" receiveEvent="_FF6UADPmEey7hLHEFocGqQ" sendEvent="_FF5s8DPmEey7hLHEFocGqQ">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_dzyjADPmEey7hLHEFocGqQ">
+        <body>배터리량이 30% 이상으로 충전되어야 패널온도 컨트롤러와 부동액온도 컨트롤러가 작동한다.&#xD;
+</body>
+      </ownedComment>
+    </message>
+    <message xmi:type="uml:Message" xmi:id="_QzFFwDPmEey7hLHEFocGqQ" name="startController" receiveEvent="_QzGT4DPmEey7hLHEFocGqQ" sendEvent="_QzFs0DPmEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_QztX4DPmEey7hLHEFocGqQ" name="" messageSort="reply" receiveEvent="_Qzt-8TPmEey7hLHEFocGqQ" sendEvent="_Qzt-8DPmEey7hLHEFocGqQ"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Interaction" xmi:id="_K70CwC6IEeycSuEX0atgvQ" name="온도제어시스템">
-    <ownedComment xmi:type="uml:Comment" xmi:id="_Fs8UsC6JEeycSuEX0atgvQ">
-      <body>일정 온도 이상 올라갔을 때 실행&#xD;
-</body>
-    </ownedComment>
     <ownedComment xmi:type="uml:Comment" xmi:id="_Kyc18C6JEeycSuEX0atgvQ">
-      <body>모터가 실행된 상태일때 일정 온도 이하로 내려가면 실행&#xD;
+      <body>배터리 충전량이 30%가 넘었을 경우 가동된다.&#xD;
+온도센서를 통해 태양광 패널의 온도를 측정하고 일정 온도 이상 올라가면 모터를 가동한다. &#xD;
+모터가 가동된 상태일 때 일정 온도 이하로 내려갈 때 가지 모터를 계속 가동한다.&#xD;
+모터가 일정 온도 이하로 내려갔다면 모터 가동을 중지한다. &#xD;
 </body>
     </ownedComment>
     <lifeline xmi:type="uml:Lifeline" xmi:id="_uyVaIC6IEeycSuEX0atgvQ" name="TempController" coveredBy="__61zMC6IEeycSuEX0atgvQ __7WwkS6IEeycSuEX0atgvQ _Cr7awS6JEeycSuEX0atgvQ _CsfbcS6JEeycSuEX0atgvQ _JNlJ4S6JEeycSuEX0atgvQ _JOWl8S6JEeycSuEX0atgvQ"/>
@@ -193,62 +186,273 @@
     <ownedEnd xmi:type="uml:Property" xmi:id="_tOqEEi6MEeycSuEX0atgvQ" name="온도센서" type="_WTfHkCzFEey9AIfa-wIJCA" association="_tOpdAC6MEeycSuEX0atgvQ"/>
     <ownedEnd xmi:type="uml:Property" xmi:id="_tOqEEy6MEeycSuEX0atgvQ" name="온도제어시스템" type="_4Bd6kCzEEey9AIfa-wIJCA" association="_tOpdAC6MEeycSuEX0atgvQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_7a3rIC6MEeycSuEX0atgvQ" name="Baterry">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_U1kucC6OEeycSuEX0atgvQ" name="volt">
-      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_-XcxAC6MEeycSuEX0atgvQ" name="PanelTempController">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ygmbMDPkEey7hLHEFocGqQ" name="tempsensor" type="____cIC6MEeycSuEX0atgvQ" association="_yglNEDPkEey7hLHEFocGqQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ygnCQDPkEey7hLHEFocGqQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ygnCQTPkEey7hLHEFocGqQ" value="1"/>
     </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_pNDWwjPlEey7hLHEFocGqQ" name="checkbatterry" type="_af4-wDPlEey7hLHEFocGqQ" association="_pNCIoDPlEey7hLHEFocGqQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pND90DPlEey7hLHEFocGqQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pND90TPlEey7hLHEFocGqQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_V74j4DPsEey7hLHEFocGqQ" name="isStart" visibility="protected">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_CoTFsC6OEeycSuEX0atgvQ" name="startController"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_8QV6kC6MEeycSuEX0atgvQ" name="CheckBaterry">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_OQDocC6NEeycSuEX0atgvQ" name="baterry" type="_7a3rIC6MEeycSuEX0atgvQ" association="_OQBzQC6NEeycSuEX0atgvQ">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OQEPgC6NEeycSuEX0atgvQ"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OQEPgS6NEeycSuEX0atgvQ" value="1"/>
-    </ownedAttribute>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_JaWdwC6NEeycSuEX0atgvQ" name="getVolt"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="_-XcxAC6MEeycSuEX0atgvQ" name="TempController">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_OZmwkC6OEeycSuEX0atgvQ" name="baterry" type="_7a3rIC6MEeycSuEX0atgvQ" association="_OZlicC6OEeycSuEX0atgvQ">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_OZmwkS6OEeycSuEX0atgvQ"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_OZnXoC6OEeycSuEX0atgvQ" value="1"/>
-    </ownedAttribute>
-    <ownedOperation xmi:type="uml:Operation" xmi:id="_CoTFsC6OEeycSuEX0atgvQ" name="startTempController"/>
-  </packagedElement>
-  <packagedElement xmi:type="uml:Class" xmi:id="____cIC6MEeycSuEX0atgvQ" name="CheckTemp">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_njQ8oS6OEeycSuEX0atgvQ" name="tempcontroller" type="_-XcxAC6MEeycSuEX0atgvQ" association="_njPHcC6OEeycSuEX0atgvQ">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_njSKwC6OEeycSuEX0atgvQ"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_njSKwS6OEeycSuEX0atgvQ" value="1"/>
-    </ownedAttribute>
+  <packagedElement xmi:type="uml:Class" xmi:id="____cIC6MEeycSuEX0atgvQ" name="TempSensor">
     <ownedOperation xmi:type="uml:Operation" xmi:id="_hLN1cC6OEeycSuEX0atgvQ" name="getTemp"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_Am6SMC6NEeycSuEX0atgvQ" name="Motor">
-    <ownedAttribute xmi:type="uml:Property" xmi:id="_oAMJMi6OEeycSuEX0atgvQ" name="tempcontroller" type="_-XcxAC6MEeycSuEX0atgvQ" association="_oALiIC6OEeycSuEX0atgvQ">
-      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_oAMJMy6OEeycSuEX0atgvQ"/>
-      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oAMJNC6OEeycSuEX0atgvQ" value="1"/>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_d8jcETOnEey7hLHEFocGqQ" name="tempcontroller" type="_-XcxAC6MEeycSuEX0atgvQ" association="_d8hm4DOnEey7hLHEFocGqQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_d8jcEjOnEey7hLHEFocGqQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_d8jcEzOnEey7hLHEFocGqQ" value="1"/>
     </ownedAttribute>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_i66RcC6OEeycSuEX0atgvQ" name="run"/>
     <ownedOperation xmi:type="uml:Operation" xmi:id="_jdtcgC6OEeycSuEX0atgvQ" name="stop"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_OQBzQC6NEeycSuEX0atgvQ" memberEnd="_OQDocC6NEeycSuEX0atgvQ _OQE2kC6NEeycSuEX0atgvQ">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OQDBYC6NEeycSuEX0atgvQ" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OQDBYS6NEeycSuEX0atgvQ" key="nature" value="UML_Nature"/>
-    </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_OQE2kC6NEeycSuEX0atgvQ" name="checkbaterry" type="_8QV6kC6MEeycSuEX0atgvQ" association="_OQBzQC6NEeycSuEX0atgvQ"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_xr__ADOjEey7hLHEFocGqQ" name="펠티어소자"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_2kQHYDOjEey7hLHEFocGqQ" name="부동액의 온도를 제어한다">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_nXOuIDOkEey7hLHEFocGqQ">
+      <body>부동액의 온도가 높아졌을 때 펠티어 소자를 작동시켜서 일정 온도(목표 온도)로 낮춰준다. &#xD;
+목표 온도에 도달하면 펠티어 소자 작동을 멈춘다.</body>
+    </ownedComment>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_OZlicC6OEeycSuEX0atgvQ" memberEnd="_OZmwkC6OEeycSuEX0atgvQ _OZnXoS6OEeycSuEX0atgvQ">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_OZmJgC6OEeycSuEX0atgvQ" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_OZmJgS6OEeycSuEX0atgvQ" key="nature" value="UML_Nature"/>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_4ewsQDOjEey7hLHEFocGqQ" name="온도센서"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_7nYDADOjEey7hLHEFocGqQ" memberEnd="_7nleYDOjEey7hLHEFocGqQ _7npIwDOjEey7hLHEFocGqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_7nibEDOjEey7hLHEFocGqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_7njpMDOjEey7hLHEFocGqQ" key="nature" value="UML_Nature"/>
     </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_OZnXoS6OEeycSuEX0atgvQ" name="tempcontroller" type="_-XcxAC6MEeycSuEX0atgvQ" association="_OZlicC6OEeycSuEX0atgvQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_7nleYDOjEey7hLHEFocGqQ" name="펠티어소자" type="_xr__ADOjEey7hLHEFocGqQ" association="_7nYDADOjEey7hLHEFocGqQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_7npIwDOjEey7hLHEFocGqQ" name="부동액의 온도를 제어한다" type="_2kQHYDOjEey7hLHEFocGqQ" association="_7nYDADOjEey7hLHEFocGqQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_njPHcC6OEeycSuEX0atgvQ" memberEnd="_njQ8oS6OEeycSuEX0atgvQ _njSx0C6OEeycSuEX0atgvQ">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_njQVkC6OEeycSuEX0atgvQ" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_njQ8oC6OEeycSuEX0atgvQ" key="nature" value="UML_Nature"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_8FC2cDOjEey7hLHEFocGqQ" memberEnd="_8FFSsDOjEey7hLHEFocGqQ _8FFSsTOjEey7hLHEFocGqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_8FEEkDOjEey7hLHEFocGqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_8FEroDOjEey7hLHEFocGqQ" key="nature" value="UML_Nature"/>
     </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_njSx0C6OEeycSuEX0atgvQ" name="checktemp" type="____cIC6MEeycSuEX0atgvQ" association="_njPHcC6OEeycSuEX0atgvQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_8FFSsDOjEey7hLHEFocGqQ" name="온도센서" type="_4ewsQDOjEey7hLHEFocGqQ" association="_8FC2cDOjEey7hLHEFocGqQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_8FFSsTOjEey7hLHEFocGqQ" name="부동액의 온도를 제어한다" type="_2kQHYDOjEey7hLHEFocGqQ" association="_8FC2cDOjEey7hLHEFocGqQ"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Association" xmi:id="_oALiIC6OEeycSuEX0atgvQ" memberEnd="_oAMJMi6OEeycSuEX0atgvQ _oAMwQC6OEeycSuEX0atgvQ">
-    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_oAMJMC6OEeycSuEX0atgvQ" source="org.eclipse.papyrus">
-      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_oAMJMS6OEeycSuEX0atgvQ" key="nature" value="UML_Nature"/>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_lP1uYDOlEey7hLHEFocGqQ" name="DB">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_0jamIDOlEey7hLHEFocGqQ">
+      <body>Day, PanelMaxTemp, Watt 를 기록하는 데이터베이스이다.&#xD;
+사용자는 앱을 통해 태양광 패널과 부동액의 목표 온도를 설정할 수 있다.</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:UseCase" xmi:id="_ncHYsDOlEey7hLHEFocGqQ" name="모니터링 앱">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_4J8A4DOlEey7hLHEFocGqQ">
+      <body>데이터 베이스에 기록된 내용을 사용자에게 모니터링해준다.</body>
+    </ownedComment>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ot2GUDOlEey7hLHEFocGqQ" memberEnd="_ot3UcDOlEey7hLHEFocGqQ _ot3UcTOlEey7hLHEFocGqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ot2tYDOlEey7hLHEFocGqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ot2tYTOlEey7hLHEFocGqQ" key="nature" value="UML_Nature"/>
     </eAnnotations>
-    <ownedEnd xmi:type="uml:Property" xmi:id="_oAMwQC6OEeycSuEX0atgvQ" name="motor" type="_Am6SMC6NEeycSuEX0atgvQ" association="_oALiIC6OEeycSuEX0atgvQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ot3UcDOlEey7hLHEFocGqQ" name="모니터링 앱" type="_ncHYsDOlEey7hLHEFocGqQ" association="_ot2GUDOlEey7hLHEFocGqQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ot3UcTOlEey7hLHEFocGqQ" name="데이터베이스" type="_lP1uYDOlEey7hLHEFocGqQ" association="_ot2GUDOlEey7hLHEFocGqQ"/>
   </packagedElement>
+  <packagedElement xmi:type="uml:Actor" xmi:id="_4Pa90DOlEey7hLHEFocGqQ" name="사용자"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_5Q5o8DOlEey7hLHEFocGqQ" memberEnd="_5Q6QAjOlEey7hLHEFocGqQ _5Q6QAzOlEey7hLHEFocGqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_5Q6QADOlEey7hLHEFocGqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_5Q6QATOlEey7hLHEFocGqQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_5Q6QAjOlEey7hLHEFocGqQ" name="사용자" type="_4Pa90DOlEey7hLHEFocGqQ" association="_5Q5o8DOlEey7hLHEFocGqQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_5Q6QAzOlEey7hLHEFocGqQ" name="모니터링 앱" type="_ncHYsDOlEey7hLHEFocGqQ" association="_5Q5o8DOlEey7hLHEFocGqQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_rbqiADOmEey7hLHEFocGqQ" name="DataBase">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_pD3bAjPkEey7hLHEFocGqQ" name="tempsensor" type="____cIC6MEeycSuEX0atgvQ" association="_pD2M4DPkEey7hLHEFocGqQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pD7scDPkEey7hLHEFocGqQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pD-IsDPkEey7hLHEFocGqQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_pejL4DPkEey7hLHEFocGqQ" name="tempsensor" type="_ZoTr8DPkEey7hLHEFocGqQ" association="_peh9wDPkEey7hLHEFocGqQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_pejL4TPkEey7hLHEFocGqQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_pejL4jPkEey7hLHEFocGqQ" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_rsXuUDPkEey7hLHEFocGqQ" name="setTemp"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_tS2tIDOmEey7hLHEFocGqQ" name="Monitoring">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_3plQYTOmEey7hLHEFocGqQ" name="database" type="_rbqiADOmEey7hLHEFocGqQ" association="_3pkpUDOmEey7hLHEFocGqQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_3plQYjOmEey7hLHEFocGqQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_3pl3cDOmEey7hLHEFocGqQ" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_tauGgDPkEey7hLHEFocGqQ" name="getData"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_3pkpUDOmEey7hLHEFocGqQ" memberEnd="_3plQYTOmEey7hLHEFocGqQ _3pl3cTOmEey7hLHEFocGqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3pkpUTOmEey7hLHEFocGqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_3plQYDOmEey7hLHEFocGqQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_3pl3cTOmEey7hLHEFocGqQ" name="monitoring" type="_tS2tIDOmEey7hLHEFocGqQ" association="_3pkpUDOmEey7hLHEFocGqQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_8ctBIDOmEey7hLHEFocGqQ" name="AntifreezingTempConrtoller">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_1dV5ITPkEey7hLHEFocGqQ" name="tempsensor" type="_ZoTr8DPkEey7hLHEFocGqQ" association="_1dUrADPkEey7hLHEFocGqQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_1dWgMDPkEey7hLHEFocGqQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_1dWgMTPkEey7hLHEFocGqQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_ptYcoDPlEey7hLHEFocGqQ" name="checkbatterry" type="_af4-wDPlEey7hLHEFocGqQ" association="_ptWncDPlEey7hLHEFocGqQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_ptZDsDPlEey7hLHEFocGqQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ptZDsTPlEey7hLHEFocGqQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_BpkBkDPpEey7hLHEFocGqQ" name="isStart">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_fT78kDPlEey7hLHEFocGqQ" name="startController"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ZjOrYDOnEey7hLHEFocGqQ" name="Peltier">
+    <ownedAttribute xmi:type="uml:Property" xmi:id="_fndesDOnEey7hLHEFocGqQ" name="antifreezingconrtoller" type="_8ctBIDOmEey7hLHEFocGqQ" association="_fncQkDOnEey7hLHEFocGqQ">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_fndesjOnEey7hLHEFocGqQ" value="*"/>
+    </ownedAttribute>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_k7yAwDPjEey7hLHEFocGqQ" name="run"/>
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_soqM4DPjEey7hLHEFocGqQ" name="stop"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_d8hm4DOnEey7hLHEFocGqQ" memberEnd="_d8jcETOnEey7hLHEFocGqQ _d8jcFDOnEey7hLHEFocGqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_d8i1ADOnEey7hLHEFocGqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_d8jcEDOnEey7hLHEFocGqQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_d8jcFDOnEey7hLHEFocGqQ" name="motor" type="_Am6SMC6NEeycSuEX0atgvQ" association="_d8hm4DOnEey7hLHEFocGqQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_fncQkDOnEey7hLHEFocGqQ" visibility="package" memberEnd="_fndesDOnEey7hLHEFocGqQ _fndeszOnEey7hLHEFocGqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_fnc3oDOnEey7hLHEFocGqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_fnc3oTOnEey7hLHEFocGqQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_fndeszOnEey7hLHEFocGqQ" name="peltier" type="_ZjOrYDOnEey7hLHEFocGqQ" association="_fncQkDOnEey7hLHEFocGqQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_SzlRoDOpEey7hLHEFocGqQ" memberEnd="_SzlRozOpEey7hLHEFocGqQ _Szl4sDOpEey7hLHEFocGqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_SzlRoTOpEey7hLHEFocGqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_SzlRojOpEey7hLHEFocGqQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_SzlRozOpEey7hLHEFocGqQ" name="온도센서" type="_WTfHkCzFEey9AIfa-wIJCA" association="_SzlRoDOpEey7hLHEFocGqQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Szl4sDOpEey7hLHEFocGqQ" name="db" type="_lP1uYDOlEey7hLHEFocGqQ" association="_SzlRoDOpEey7hLHEFocGqQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_Tb7rEDOpEey7hLHEFocGqQ" memberEnd="_Tb85MDOpEey7hLHEFocGqQ _Tb85MTOpEey7hLHEFocGqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_Tb8SIDOpEey7hLHEFocGqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_Tb8SITOpEey7hLHEFocGqQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Tb85MDOpEey7hLHEFocGqQ" name="온도센서" type="_4ewsQDOjEey7hLHEFocGqQ" association="_Tb7rEDOpEey7hLHEFocGqQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_Tb85MTOpEey7hLHEFocGqQ" name="db" type="_lP1uYDOlEey7hLHEFocGqQ" association="_Tb7rEDOpEey7hLHEFocGqQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_01bmYDOpEey7hLHEFocGqQ" memberEnd="_01c0gjOpEey7hLHEFocGqQ _01dbkDOpEey7hLHEFocGqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_01c0gDOpEey7hLHEFocGqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_01c0gTOpEey7hLHEFocGqQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_01c0gjOpEey7hLHEFocGqQ" name="배터리량을 측정한다" type="_z0eDwCzGEey9AIfa-wIJCA" association="_01bmYDOpEey7hLHEFocGqQ"/>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_01dbkDOpEey7hLHEFocGqQ" name="부동액의 온도를 제어한다" type="_2kQHYDOjEey7hLHEFocGqQ" association="_01bmYDOpEey7hLHEFocGqQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_vfK24DOqEey7hLHEFocGqQ" name="데이터베이스">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_pPUVsDPnEey7hLHEFocGqQ">
+      <body>Day, PanelMaxTemp, Watt 를 기록하는 데이터베이스이다.&#xD;
+사용자는 앱을 통해 태양광 패널과 부동액의 목표 온도를 설정할 수 있다.&#xD;
+</body>
+    </ownedComment>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_xQ7IYDOqEey7hLHEFocGqQ" name="TempSensor" coveredBy="_0yDyYTPiEey7hLHEFocGqQ _0yepIDPiEey7hLHEFocGqQ _0ycM4DPiEey7hLHEFocGqQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_6PdJoDOqEey7hLHEFocGqQ" name="Database" coveredBy="_0yDyYDPiEey7hLHEFocGqQ _0yepITPiEey7hLHEFocGqQ _6UA_EDPiEey7hLHEFocGqQ _6UguUDPiEey7hLHEFocGqQ _6UeSEDPiEey7hLHEFocGqQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_A39usDOrEey7hLHEFocGqQ" name="App" coveredBy="_6UAYADPiEey7hLHEFocGqQ _6UguUTPiEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0yDyYDPiEey7hLHEFocGqQ" name="Message4SendEvent" covered="_6PdJoDOqEey7hLHEFocGqQ" message="_0yCkQDPiEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0yDyYTPiEey7hLHEFocGqQ" name="Message4ReceiveEvent" covered="_xQ7IYDOqEey7hLHEFocGqQ" message="_0yCkQDPiEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_0ycM4DPiEey7hLHEFocGqQ" name="BehaviorExecutionSpecification7" covered="_xQ7IYDOqEey7hLHEFocGqQ" finish="_0yepIDPiEey7hLHEFocGqQ" start="_0yDyYTPiEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0yepIDPiEey7hLHEFocGqQ" name="Message9SendEvent" covered="_xQ7IYDOqEey7hLHEFocGqQ" message="_0yeCEDPiEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0yepITPiEey7hLHEFocGqQ" name="Message9ReceiveEvent" covered="_6PdJoDOqEey7hLHEFocGqQ" message="_0yeCEDPiEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_6UAYADPiEey7hLHEFocGqQ" name="Message11SendEvent" covered="_A39usDOrEey7hLHEFocGqQ" message="_6T_w8DPiEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_6UA_EDPiEey7hLHEFocGqQ" name="Message11ReceiveEvent" covered="_6PdJoDOqEey7hLHEFocGqQ" message="_6T_w8DPiEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_6UeSEDPiEey7hLHEFocGqQ" name="BehaviorExecutionSpecification14" covered="_6PdJoDOqEey7hLHEFocGqQ" finish="_6UguUDPiEey7hLHEFocGqQ" start="_6UA_EDPiEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_6UguUDPiEey7hLHEFocGqQ" name="Message16SendEvent" covered="_6PdJoDOqEey7hLHEFocGqQ" message="_6UgHQDPiEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_6UguUTPiEey7hLHEFocGqQ" name="Message16ReceiveEvent" covered="_A39usDOrEey7hLHEFocGqQ" message="_6UgHQDPiEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_0yCkQDPiEey7hLHEFocGqQ" name="setTemp" receiveEvent="_0yDyYTPiEey7hLHEFocGqQ" sendEvent="_0yDyYDPiEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_0yeCEDPiEey7hLHEFocGqQ" name="" messageSort="reply" receiveEvent="_0yepITPiEey7hLHEFocGqQ" sendEvent="_0yepIDPiEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_6T_w8DPiEey7hLHEFocGqQ" name="getData" receiveEvent="_6UA_EDPiEey7hLHEFocGqQ" sendEvent="_6UAYADPiEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_6UgHQDPiEey7hLHEFocGqQ" name="" messageSort="reply" receiveEvent="_6UguUTPiEey7hLHEFocGqQ" sendEvent="_6UguUDPiEey7hLHEFocGqQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_vZ2iIDPjEey7hLHEFocGqQ" name="부동액관리">
+    <ownedComment xmi:type="uml:Comment" xmi:id="_4bkdcDPnEey7hLHEFocGqQ">
+      <body>부동액의 온도가 높아졌을 때 펠티어 소자를 작동시켜서 일정 온도(목표 온도)로 낮춰준다. &#xD;
+목표 온도에 도달하면 펠티어 소자 작동을 멈춘다.</body>
+    </ownedComment>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_oy5U4DPmEey7hLHEFocGqQ" name="CheckBatterry" coveredBy="_vgz-YDPmEey7hLHEFocGqQ _vg1MgDPmEey7hLHEFocGqQ _QY85ETPnEey7hLHEFocGqQ _QZlLMDPnEey7hLHEFocGqQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_1qLJUDPmEey7hLHEFocGqQ" name="AntifreezingTempConrtoller" coveredBy="_QY85EjPnEey7hLHEFocGqQ _QZkkIDPnEey7hLHEFocGqQ _dDwXwDPnEey7hLHEFocGqQ _dEewgDPnEey7hLHEFocGqQ _iP0M8DPnEey7hLHEFocGqQ _iQVKUTPnEey7hLHEFocGqQ _j_TNkDPnEey7hLHEFocGqQ _kAECkDPnEey7hLHEFocGqQ _QZgSsDPnEey7hLHEFocGqQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_Xux3IDPnEey7hLHEFocGqQ" name="TempSensor" coveredBy="_dDxl4DPnEey7hLHEFocGqQ _dEc7VTPnEey7hLHEFocGqQ _dEbtMDPnEey7hLHEFocGqQ"/>
+    <lifeline xmi:type="uml:Lifeline" xmi:id="_bZz-cDPnEey7hLHEFocGqQ" name="Peltier" coveredBy="_iP00ADPnEey7hLHEFocGqQ _iQVKUDPnEey7hLHEFocGqQ _j_T0oDPnEey7hLHEFocGqQ _kADbgDPnEey7hLHEFocGqQ _iQSuEDPnEey7hLHEFocGqQ _j_-jADPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_vgz-YDPmEey7hLHEFocGqQ" name="Message2SendEvent" covered="_oy5U4DPmEey7hLHEFocGqQ" message="_vgzXUDPmEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_vg1MgDPmEey7hLHEFocGqQ" name="Message2ReceiveEvent" covered="_oy5U4DPmEey7hLHEFocGqQ" message="_vgzXUDPmEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QY85ETPnEey7hLHEFocGqQ" name="Message6SendEvent" covered="_oy5U4DPmEey7hLHEFocGqQ" message="_QY85EDPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QY85EjPnEey7hLHEFocGqQ" name="Message6ReceiveEvent" covered="_1qLJUDPmEey7hLHEFocGqQ" message="_QY85EDPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_QZgSsDPnEey7hLHEFocGqQ" name="BehaviorExecutionSpecification9" covered="_1qLJUDPmEey7hLHEFocGqQ" finish="_QZkkIDPnEey7hLHEFocGqQ" start="_QY85EjPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QZkkIDPnEey7hLHEFocGqQ" name="Message11SendEvent" covered="_1qLJUDPmEey7hLHEFocGqQ" message="_QZj9EDPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_QZlLMDPnEey7hLHEFocGqQ" name="Message11ReceiveEvent" covered="_oy5U4DPmEey7hLHEFocGqQ" message="_QZj9EDPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_dDwXwDPnEey7hLHEFocGqQ" name="Message15SendEvent" covered="_1qLJUDPmEey7hLHEFocGqQ" message="_dDuikDPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_dDxl4DPnEey7hLHEFocGqQ" name="Message15ReceiveEvent" covered="_Xux3IDPnEey7hLHEFocGqQ" message="_dDuikDPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_dEbtMDPnEey7hLHEFocGqQ" name="BehaviorExecutionSpecification18" covered="_Xux3IDPnEey7hLHEFocGqQ" finish="_dEc7VTPnEey7hLHEFocGqQ" start="_dDxl4DPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_dEc7VTPnEey7hLHEFocGqQ" name="Message20SendEvent" covered="_Xux3IDPnEey7hLHEFocGqQ" message="_dEc7VDPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_dEewgDPnEey7hLHEFocGqQ" name="Message20ReceiveEvent" covered="_1qLJUDPmEey7hLHEFocGqQ" message="_dEc7VDPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_iP0M8DPnEey7hLHEFocGqQ" name="Message22SendEvent" covered="_1qLJUDPmEey7hLHEFocGqQ" message="_iPzl4DPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_iP00ADPnEey7hLHEFocGqQ" name="Message22ReceiveEvent" covered="_bZz-cDPnEey7hLHEFocGqQ" message="_iPzl4DPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_iQSuEDPnEey7hLHEFocGqQ" name="BehaviorExecutionSpecification25" covered="_bZz-cDPnEey7hLHEFocGqQ" finish="_iQVKUDPnEey7hLHEFocGqQ" start="_iP00ADPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_iQVKUDPnEey7hLHEFocGqQ" name="Message27SendEvent" covered="_bZz-cDPnEey7hLHEFocGqQ" message="_iQUjQDPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_iQVKUTPnEey7hLHEFocGqQ" name="Message27ReceiveEvent" covered="_1qLJUDPmEey7hLHEFocGqQ" message="_iQUjQDPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_j_TNkDPnEey7hLHEFocGqQ" name="Message29SendEvent" covered="_1qLJUDPmEey7hLHEFocGqQ" message="_j_R_cDPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_j_T0oDPnEey7hLHEFocGqQ" name="Message29ReceiveEvent" covered="_bZz-cDPnEey7hLHEFocGqQ" message="_j_R_cDPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_j_-jADPnEey7hLHEFocGqQ" name="BehaviorExecutionSpecification32" covered="_bZz-cDPnEey7hLHEFocGqQ" finish="_kADbgDPnEey7hLHEFocGqQ" start="_j_T0oDPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_kADbgDPnEey7hLHEFocGqQ" name="Message34SendEvent" covered="_bZz-cDPnEey7hLHEFocGqQ" message="_kAC0cDPnEey7hLHEFocGqQ"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_kAECkDPnEey7hLHEFocGqQ" name="Message34ReceiveEvent" covered="_1qLJUDPmEey7hLHEFocGqQ" message="_kAC0cDPnEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_vgzXUDPmEey7hLHEFocGqQ" name="check" receiveEvent="_vg1MgDPmEey7hLHEFocGqQ" sendEvent="_vgz-YDPmEey7hLHEFocGqQ">
+      <ownedComment xmi:type="uml:Comment" xmi:id="_ys9xUDPmEey7hLHEFocGqQ">
+        <body>배터리량이 30% 이상으로 충전되어야 패널온도 컨트롤러와 부동액온도 컨트롤러가 작동한다.&#xD;
+</body>
+      </ownedComment>
+    </message>
+    <message xmi:type="uml:Message" xmi:id="_QY85EDPnEey7hLHEFocGqQ" name="startController" receiveEvent="_QY85EjPnEey7hLHEFocGqQ" sendEvent="_QY85ETPnEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_QZj9EDPnEey7hLHEFocGqQ" name="" messageSort="reply" receiveEvent="_QZlLMDPnEey7hLHEFocGqQ" sendEvent="_QZkkIDPnEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_dDuikDPnEey7hLHEFocGqQ" name="getTemp" receiveEvent="_dDxl4DPnEey7hLHEFocGqQ" sendEvent="_dDwXwDPnEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_dEc7VDPnEey7hLHEFocGqQ" name="" messageSort="reply" receiveEvent="_dEewgDPnEey7hLHEFocGqQ" sendEvent="_dEc7VTPnEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_iPzl4DPnEey7hLHEFocGqQ" name="run" receiveEvent="_iP00ADPnEey7hLHEFocGqQ" sendEvent="_iP0M8DPnEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_iQUjQDPnEey7hLHEFocGqQ" name="" messageSort="reply" receiveEvent="_iQVKUTPnEey7hLHEFocGqQ" sendEvent="_iQVKUDPnEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_j_R_cDPnEey7hLHEFocGqQ" name="stop" receiveEvent="_j_T0oDPnEey7hLHEFocGqQ" sendEvent="_j_TNkDPnEey7hLHEFocGqQ"/>
+    <message xmi:type="uml:Message" xmi:id="_kAC0cDPnEey7hLHEFocGqQ" name="" messageSort="reply" receiveEvent="_kAECkDPnEey7hLHEFocGqQ" sendEvent="_kADbgDPnEey7hLHEFocGqQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_ZoTr8DPkEey7hLHEFocGqQ" name="TempSensor">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_gn8XkDPkEey7hLHEFocGqQ" name="getTemp"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_pD2M4DPkEey7hLHEFocGqQ" memberEnd="_pD3bAjPkEey7hLHEFocGqQ _pD_94DPkEey7hLHEFocGqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pD3bADPkEey7hLHEFocGqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pD3bATPkEey7hLHEFocGqQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_pD_94DPkEey7hLHEFocGqQ" name="database" type="_rbqiADOmEey7hLHEFocGqQ" association="_pD2M4DPkEey7hLHEFocGqQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_peh9wDPkEey7hLHEFocGqQ" memberEnd="_pejL4DPkEey7hLHEFocGqQ _pejL4zPkEey7hLHEFocGqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_peik0DPkEey7hLHEFocGqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_peik0TPkEey7hLHEFocGqQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_pejL4zPkEey7hLHEFocGqQ" name="database" type="_rbqiADOmEey7hLHEFocGqQ" association="_peh9wDPkEey7hLHEFocGqQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_yglNEDPkEey7hLHEFocGqQ" memberEnd="_ygmbMDPkEey7hLHEFocGqQ _ygnCQjPkEey7hLHEFocGqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ygl0IDPkEey7hLHEFocGqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ygl0ITPkEey7hLHEFocGqQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ygnCQjPkEey7hLHEFocGqQ" name="paneltempcontroller" type="_-XcxAC6MEeycSuEX0atgvQ" association="_yglNEDPkEey7hLHEFocGqQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_1dUrADPkEey7hLHEFocGqQ" memberEnd="_1dV5ITPkEey7hLHEFocGqQ _1dXHQDPkEey7hLHEFocGqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_1dVSEDPkEey7hLHEFocGqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_1dV5IDPkEey7hLHEFocGqQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_1dXHQDPkEey7hLHEFocGqQ" name="antifreezingtempconrtoller" type="_8ctBIDOmEey7hLHEFocGqQ" association="_1dUrADPkEey7hLHEFocGqQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_af4-wDPlEey7hLHEFocGqQ" name="CheckBatterry">
+    <ownedOperation xmi:type="uml:Operation" xmi:id="_hdFaYDPlEey7hLHEFocGqQ" name="check"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_pNCIoDPlEey7hLHEFocGqQ" memberEnd="_pNDWwjPlEey7hLHEFocGqQ _pND90jPlEey7hLHEFocGqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_pNDWwDPlEey7hLHEFocGqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_pNDWwTPlEey7hLHEFocGqQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_pND90jPlEey7hLHEFocGqQ" name="paneltempcontroller" type="_-XcxAC6MEeycSuEX0atgvQ" association="_pNCIoDPlEey7hLHEFocGqQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_ptWncDPlEey7hLHEFocGqQ" memberEnd="_ptYcoDPlEey7hLHEFocGqQ _ptZDsjPlEey7hLHEFocGqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_ptX1kDPlEey7hLHEFocGqQ" source="org.eclipse.papyrus">
+      <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_ptX1kTPlEey7hLHEFocGqQ" key="nature" value="UML_Nature"/>
+    </eAnnotations>
+    <ownedEnd xmi:type="uml:Property" xmi:id="_ptZDsjPlEey7hLHEFocGqQ" name="antifreezingtempconrtoller" type="_8ctBIDOmEey7hLHEFocGqQ" association="_ptWncDPlEey7hLHEFocGqQ"/>
+  </packagedElement>
+  <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_3pAioDPoEey7hLHEFocGqQ">
+    <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_3pENADPoEey7hLHEFocGqQ" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#_Kv8EIKFXEeS_KNX0nfvIVQ"/>
+    </eAnnotations>
+    <appliedProfile xmi:type="uml:Profile" href="pathmap://PAPYRUS_ACTIONLANGUAGE_PROFILE/ActionLanguage-Profile.profile.uml#ActionLanguage"/>
+  </profileApplication>
 </uml:Model>
